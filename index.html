@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/img.png">
+    <title>Clicky Animation Sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cont">
+        <h1>Clicky Animation Sample</h1>
+        <span>The widget will animate itself after a few seconds.</span>
+        <span class="change_img">Change image</span>
+    </div>
+    <div class="clicky_cont">
+        <div class="widget_cont">
+            <div class="top">
+                <img class="logo" src="images/img.png" alt="">
+                <span>Clicky, here to help you!</span>
+                <div class="svg close"><img src="icons/x.svg" alt=""></div>
+            </div>
+            <div class="main">
+            </div>
+            <form class="bottom">
+                <input type="text" required placeholder="Type your message here ...">
+                <button>Send</button>
+            </form>
+        </div>
+        <div class="button_cont">
+            <img src="images/img.png" alt="">
+        </div>
+    </div>
+    <audio id="notifSound" src="sounds/notif.mp3" preload="auto"></audio>
+</body>
+</html>
