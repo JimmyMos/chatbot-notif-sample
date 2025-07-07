@@ -1,6 +1,3 @@
-const images   = ['images/img.png', 'images/img5.png', 'images/img2.png', 'images/img3.png'];
-let imageIndex = 0;
-//
 const timeBeforeAnimate = 3000; // in ms
 const AnimateVisible    = 10000; // in ms
 //
@@ -8,10 +5,10 @@ let messages = [
     {
         from: 'bot',
         content: `
-            Bonjour 👋,<br>
-            je suis Clicky, votre assistant virtuelle !<br>
-            Propulsée par l'IA générative, je vous aide à trouver des produits, à répondre à vos questions et à vous guider vers les bonnes pages.<br>
-            Je suis encore en apprentissage, alors merci pour votre patience pendant que je continue de m'améliorer 😊.
+            Hello 👋,<br>
+            I'm Chaty, your virtual assistant!<br>
+            Powered by generative AI, I help you find products, answer your questions, and guide you to the right pages.<br>
+            I'm still learning, so thank you for your patience while I keep improving 😊.
         `
     }
 ]
@@ -26,11 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const messagesCont = document.querySelector('.widget_cont .main');
     const messageForm  = document.querySelector('.widget_cont form');
     const messageInput = document.querySelector('.widget_cont form input');
-    //
-    const changeImgBtn = document.querySelector('.change_img');
-    const buttonImg    = document.querySelector('.clicky_cont .button_cont img');
-    const widgetImg    = document.querySelector('.widget_cont img.logo');
-    const favicon      = document.querySelector("link[rel~='icon']");
     //
     let wasWidgetOpened = false;
     let isWidgetOpen    = false;
@@ -72,11 +64,11 @@ window.addEventListener('DOMContentLoaded', () => {
         input.value = '';
         messagesCont.scrollTop = messagesCont.scrollHeight;
         //
-        // Bot reponse
+        // Bot response
         setTimeout(() => {
             const botReply = {
                 from: 'bot',
-                content: "Merci pour votre aimable message ! 😊 (Réponse automatique)"
+                content: "Thanks for your kind message! 😊 (Auto-reply)"
             };
             messages.push(botReply);
 
@@ -98,8 +90,8 @@ window.addEventListener('DOMContentLoaded', () => {
             buttonCont.insertBefore(notif, avatar);
             if (sound) {
                 sound.play().catch(e => {
-                    // Peut arriver si l'utilisateur n'a pas encore interagi avec la page
-                    console.warn("Le son ne peut pas être joué automatiquement :", e);
+                    // Might happen if the user hasn't interacted with the page yet
+                    console.warn("Sound cannot be played automatically:", e);
                 });
             }
             if (avatar) avatar.classList.add('attention');   
@@ -109,8 +101,8 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         notif.classList.remove('show');
         avatar.classList.remove('attention');
-    }, timeBeforeAnimate+AnimateVisible); // 3s in + 5s visible
-        setTimeout(() => {
+    }, timeBeforeAnimate+AnimateVisible); // 3s in + 10s visible
+    setTimeout(() => {
         notif.style.display = 'none';
     }, timeBeforeAnimate+AnimateVisible+400);
     //
@@ -129,15 +121,6 @@ window.addEventListener('DOMContentLoaded', () => {
         if (widget) {
             closeWidget();
         }
-    })
-    //
-    changeImgBtn.addEventListener('click', () => {
-        if(imageIndex+1 === images.length){imageIndex = 0}
-        else {imageIndex = imageIndex+1;}
-        //
-        buttonImg.src = images[imageIndex];
-        widgetImg.src = images[imageIndex];
-        favicon.href  = images[imageIndex];
     })
     messageForm.addEventListener('submit', (e) => {
         e.preventDefault();

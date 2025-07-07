@@ -27,7 +27,7 @@ html, body{
 }
 
 .cont .change_img{
-    color: #d13b00;
+    color: #18181B;
     text-decoration: underline;
     cursor: pointer;
     margin-top: 10px;
@@ -60,7 +60,8 @@ html, body{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     cursor: pointer;
     transition: all 250ms;
-    background: linear-gradient(to bottom, #ea5600 0%, #d13b00 100%);
+    background: linear-gradient(to bottom, #494949 0%, #18181B 100%);
+    border: 1px solid #000000;
 }
 
 .clicky_cont .button_cont:hover img{
@@ -87,7 +88,7 @@ html, body{
     cursor: pointer;
     color: #fff;
     font-weight: 500;
-    background: linear-gradient(to bottom, #ea5600 0%, #d13b00 100%);
+    background: linear-gradient(to bottom, #494949 0%, #18181B 100%);
     animation: showNotification 400ms ease;
 }
 
@@ -99,7 +100,7 @@ html, body{
     right: -4px;
     height: 14px;
     width: 14px;
-    background: linear-gradient(to bottom, #ea5600 0%, #d13b00 100%);
+    background: linear-gradient(to bottom, #494949 0%, #18181B 100%);
     background-attachment: fixed;
     border-bottom-left-radius: 15px;
     z-index: -1;
@@ -147,7 +148,7 @@ html, body{
 
 .clicky_cont .widget_cont .top{
     width: 100%;
-    background: linear-gradient(to bottom, #ea5600 0%, #d13b00 100%);
+    background: linear-gradient(to bottom, #494949 0%, #18181B 100%);
     display: flex;
     padding: 6px 20px;
     align-items: center;
@@ -210,7 +211,7 @@ html, body{
 }
 
 .clicky_cont .widget_cont .main .msg.user{
-    background: linear-gradient(to bottom, #d13b00 0%, #d13b00 100%);
+    background: linear-gradient(to bottom, #18181B 0%, #18181B 100%);
     color: #fff;
     margin-left: auto;
 }
@@ -219,7 +220,7 @@ html, body{
     padding: 10px;
     display: flex;
     align-items: center;
-    border-top: 1px solid #d13b00;
+    border-top: 1px solid #18181B;
     gap: 10px;
 }
 
@@ -234,16 +235,16 @@ html, body{
 }
 
 .clicky_cont .widget_cont .bottom input:hover{
-    box-shadow: 0 0 0 1px rgba(221, 70, 0, 0.479);
+    box-shadow: 0 0 0 1px rgba(88, 88, 88, 0.479);
 }
 
 .clicky_cont .widget_cont .bottom input:focus-within{
-    box-shadow: 0 0 0 1px rgba(223, 52, 0, 0.34),0 0 0 4px rgba(230, 73, 0, 0.16)
+    box-shadow: 0 0 0 1px rgba(70, 70, 70, 0.34),0 0 0 3px rgba(29, 29, 29, 0.16)
 }
 
 .clicky_cont .widget_cont .bottom button{
     height: 36px;
-    background: linear-gradient(to bottom, #ea5600 0%, #d13b00 100%);
+    background: linear-gradient(to bottom, #494949 0%, #18181B 100%);
     color: #fff;
     font-weight: 500;
     outline: unset;
